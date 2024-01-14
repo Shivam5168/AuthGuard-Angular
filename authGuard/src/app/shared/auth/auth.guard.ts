@@ -8,6 +8,7 @@ debugger
     const username = localStorage.getItem('username');
     const password = localStorage.getItem('password');
   
-  return username && password != null ?  true : (router.navigate(['/login']), false);
+    return (username !== null && password !== null && username !== "" && password !== "") ? true : (router.navigate(['/login']), false);
+
 }
 

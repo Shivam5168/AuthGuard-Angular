@@ -22,11 +22,10 @@ export class LoginComponent {
     if(this.loginForm.valid){
     localStorage.setItem('username', this.loginForm.value.username);
     localStorage.setItem('password', this.loginForm.value.password);
-    alert(this.loginForm.value.username + ' ' + this.loginForm.value.password);
+    //alert(this.loginForm.value.username + ' ' + this.loginForm.value.password);
     this.router.navigate(['/dashboard']);
     }else{
-      this.router.navigate(['/dashboard']);
-      alert("Please enter the username and password");
+      alert("Please enter the username or password to login");
     } 
   }
 

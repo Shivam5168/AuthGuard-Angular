@@ -1,2 +1,123 @@
-<p>dashboard works!</p>
-<button type="button" (click)="logout()">logout</button>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    height: 97.5vh;
+    width: 100%;
+    background-image: url(../../../assets/image.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.navbar{
+    width: 88%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#bytee{
+    text-shadow: 0px 0px 9px #111010;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition-property: 20px;
+    transition-duration: 2s;
+    transition-delay: 500ms;
+    transition-timing-function: ease-in-out;
+    border-radius: 10px;
+}
+
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: rgb(251 194 189);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 251, 251);
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color : rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.content{
+    width: 100%;
+    position:absolute;
+    top: 30%;
+}
+
+.left-col{
+    margin-left: 6%;
+}
+
+.left-col h1{
+    font-size: 90px;
+    color: #fff;
+    line-height: 110px;
+    float: left;
+}
+
+.right-col{
+    float: right;
+    margin-right: 6%;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+
+}
+
+.right-col p{
+    font-size: 18px;
+    color:hsl(192, 78%, 47%);
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+#icon{
+    width:80px;
+    cursor:pointer;
+
+}
+</style>
+<div class="container">
+    <div class="navbar">
+      <h1 id="bytee">DASHOARD</h1>
+      <ul>
+        
+        <li><a (click)="logout()">logout</a></li>
+        
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left-col">
+        <h1>
+          THE <br />
+          REAL <br />
+          MUSIC
+        </h1>
+      </div>
+      
+  </div>
+  <audio id="mySong" >
+    <source src="execuses.mp3" type="audio/mp3" />
+  </audio>
+
+  
